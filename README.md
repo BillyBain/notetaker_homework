@@ -40,4 +40,4 @@ Once on the website the user fills in the fields. Title for the note and a text 
 It was a fun assignment and I really enjoyed reading through and following the prewritten code and making it function properly. I struggled with the delete feature and trying to understand how to make it work was a fun task.
 
 # Screenshot
-![Note Taker - Google Chrome 6_4_2022 9_40_51 PM](https://user-images.githubusercontent.com/100814286/172031294-e77b7e21-996f-4ee6-8e7e-0435989fa743.png)
+![Note Taker - Google Chrome 6_5_2022 7_39_10 PM](https://user-images.githubusercontent.com/100814286/172075327-a8f92e1f-1ec9-402b-a4f8-6062693ec9ae.png)
