@@ -5,7 +5,7 @@ const util = require('util');
 const uuid = require('./public/assets/js/uuid');
 const note = require('./db/db.json');
 
-
+const PORT = 3001;
 const app = express();
 
 app.use(express.json());
@@ -66,6 +66,6 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 
-app.listen(3001, () =>
-  console.log(`App listening at http://localhost:3001 🚀`)
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT}🚀`)
 );
