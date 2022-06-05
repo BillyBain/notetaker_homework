@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 const uuid = require('./public/assets/js/uuid');
-const note = require('./db/db.json');
+let db = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -38,6 +38,16 @@ const writeToFile = (destination, content) =>
       }
     });
   };
+
+  const readAndDelete = (content, file) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        writeToFile(file, content);
+      }
+    });
+  };
   
 app.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
@@ -54,18 +64,24 @@ app.post('/api/notes', (req, res) => {
     };
 
     readAndAppend(newNote, './db/db.json');
-    res.json(`Note added successfully 🚀`);
+    res.json(`Note added successfully`);
   } else {
     res.error('Error in adding note!');
   }
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  const noteIndex = note.findIndex(({ id }) => id == req.params.id);
-  note.splice(noteIndex, 1);
+  const { id } = req.params;
+
+  const deleted = db.find(db => db.id === id);
+  if (deleted) {
+    db = db.filter(db => db.id != id);  
+    readAndDelete(db, './db/db.json');
+    res.json('Note removed successfully!')
+  }
 });
 
 
 app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT}🚀`)
+  console.log(`App listening at http://localhost:${PORT}`)
 );
