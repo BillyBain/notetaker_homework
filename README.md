@@ -28,7 +28,9 @@ It is used to catalog thoughts or tasks the user needs to remember or get done.
 
 # Links
 Github Repo: https://github.com/BillyBain/notetaker_homework
+
 Github Page: https://billybain.github.io/notetaker_homework/
+
 Heroku Deploy: https://stormy-spire-43418.herokuapp.com/
 
 # Test Instructions
