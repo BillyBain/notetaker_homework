@@ -5,7 +5,7 @@ const util = require('util');
 const uuid = require('./public/assets/js/uuid');
 const note = require('./db/db.json');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.json());
