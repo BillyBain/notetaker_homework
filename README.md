@@ -34,7 +34,7 @@ Github Page: https://billybain.github.io/notetaker_homework/
 Heroku Deploy: https://stormy-spire-43418.herokuapp.com/
 
 # Test Instructions
-Once on the website the user fills in the fields. Title for the note and a text field to write out what you would like to note. Once complete the user clicks the save icon ("\f0c7") to add the note to the tasks column. When the user clicks the task it will replace the add note form for the user to see. If the user would like to add a new note after viewing they can click the plus button ("\f067").
+Once on the website the user fills in the fields. Title for the note and a text field to write out what you would like to note. Once complete the user clicks the save icon to add the note to the tasks column. When the user clicks the task it will replace the add note form for the user to see. If the user would like to add a new note after viewing they can click the plus button.
 
 # Thoughts
 It was a fun assignment and I really enjoyed reading through and following the prewritten code and making it function properly. I struggled with the delete feature and trying to understand how to make it work was a fun task.
